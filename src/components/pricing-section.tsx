@@ -47,31 +47,33 @@ export function PricingSection({
   );
 
   return (
-    <div
-      className={cn(
-        "flex w-full flex-col items-center justify-center space-y-7 p-4",
-        props.className
-      )}
-      {...props}
-    >
-      <div className="mx-auto max-w-xl space-y-2">
-        <h2 className="text-center font-bold text-2xl tracking-tight md:text-3xl lg:font-extrabold lg:text-4xl">
-          {heading}
-        </h2>
-        {description && (
-          <p className="text-center text-muted-foreground text-sm md:text-base">
-            {description}
-          </p>
+    <section className="bg-background py-16 md:py-32">
+      <div
+        className={cn(
+          "flex w-full flex-col items-center justify-center space-y-7 p-4",
+          props.className
         )}
-      </div>
+        {...props}
+      >
+        <div className="mx-auto max-w-xl space-y-2">
+          <h2 className="text-center font-bold text-2xl tracking-tight md:text-3xl lg:font-extrabold lg:text-4xl">
+            {heading}
+          </h2>
+          {description && (
+            <p className="text-center text-muted-foreground text-sm md:text-base">
+              {description}
+            </p>
+          )}
+        </div>
 
-      <FrequencyToggle frequency={frequency} setFrequency={setFrequency} />
-      <div className="mx-auto grid w-full max-w-4xl grid-cols-1 gap-6 md:grid-cols-3">
-        {plans.map((plan) => (
-          <PricingCard frequency={frequency} key={plan.name} plan={plan} />
-        ))}
+        <FrequencyToggle frequency={frequency} setFrequency={setFrequency} />
+        <div className="mx-auto grid w-full max-w-4xl grid-cols-1 gap-6 md:grid-cols-3">
+          {plans.map((plan) => (
+            <PricingCard frequency={frequency} key={plan.name} plan={plan} />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

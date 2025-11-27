@@ -91,7 +91,7 @@ export function StickyFooter() {
       className="relative h-[300px] w-full"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      <div className="fixed bottom-0 h-[500px] w-full">
+      <div className="fixed bottom-0 h-[500px] w-full bg-background">
         <div className="relative flex h-full flex-col justify-end">
           <div className="bg-[radial-gradient(35%_80%_at_30%_0%,--theme(--color-foreground/.1),transparent)] mx-auto w-full max-w-4xl md:border-x">
             <div className="bg-border absolute inset-x-0 top-0 h-px w-full" />
